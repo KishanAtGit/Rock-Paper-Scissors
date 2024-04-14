@@ -4,6 +4,7 @@ body {
   font-size: 10px;
   background-color: #89c15e;
   font-family: Roboto;
+  user-select: none;
 }
 
 .header {
@@ -53,14 +54,78 @@ body {
   gap: 2vw;
 }
 
+.the-game {
+  margin-top: 5vh;
+}
+
 .the-game > svg {
-  width: 50vw;
-  height: 50vh;
-  margin-left: 32vw;
+  margin-left: 34vw;
+  width: 30vw;
+  height: 55vh;
 }
 
 .background-triangle {
   fill: transparent;
   stroke: #000000a3;
-  stroke-width: 8;
+  stroke-width: 12;
+}
+
+.banner {
+  position: fixed;
+  right: 3vw;
+  bottom: 13vh;
+  width: 20vw;
+  background-color: #004429;
+  border: 7px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.banner {
+  visibility: hidden;
+}
+
+.content > h1 {
+  font-size: 2.7em;
+  text-align: center;
+  margin: auto;
+}
+
+.content > ul > li {
+  list-style-type: square;
+  font-size: 1.7em;
+  margin: 7px 0;
+}
+
+#banner-openBtn > button {
+  position: fixed;
+  right: 3vw;
+  bottom: 5vh;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 13px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 8vw;
+  cursor: pointer;
+}
+
+#banner-closeBtn {
+  position: absolute;
+  top: -5vh;
+  right: -2vw;
+  text-decoration: none;
+  background-color: #ff0000;
+  color: white;
+  font-size: 3em;
+  border-radius: 25px;
+  width: 2vw;
+  height: 5vh;
+  text-align: center;
+  border: 5px solid white;
+  font-weight: 600;
 }
