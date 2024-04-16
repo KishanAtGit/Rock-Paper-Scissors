@@ -99,10 +99,16 @@ body {
   margin: 7px 0;
 }
 
-#banner-openBtn > button {
+#corner-buttons {
+  display: flex;
+  gap: 2vw;
   position: fixed;
-  right: 3vw;
+  right: 4vw;
   bottom: 5vh;
+}
+
+#corner-buttons > #banner-openBtn,
+#corner-buttons > #next-button {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 10px;
@@ -112,6 +118,10 @@ body {
   font-weight: 600;
   width: 8vw;
   cursor: pointer;
+}
+
+#next-button {
+  display: none;
 }
 
 #banner-closeBtn {
@@ -134,9 +144,23 @@ body {
   display: flex;
   gap: 30vw;
   margin-left: 27vw;
-  /* justify-content: center; */
-  /* visibility: hidden; */
+  margin-top: 15vh;
   display: none;
+}
+
+.you-picked,
+.pc-picked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+
+.you-picked > div:nth-child(1),
+.pc-picked > div:nth-child(1) {
+  font-size: 1.3em;
+  color: white;
+  font-weight: 600;
 }
 
 .rock,
@@ -176,6 +200,40 @@ body {
   justify-items: center;
   left: 63px;
   top: 50px;
+}
+
+#result-message {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#message1 {
+  font-weight: 700;
+  font-size: 3.5em;
+  color: white;
+}
+
+#message2 {
+  font-weight: 700;
+  font-size: 3em;
+  color: white;
+}
+
+#result-message > button {
+  width: 9vw;
+  font-size: 1.3em;
+  padding: 9px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: #6b6b6b;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* #result > .you-picked > div:nth-child(1) > img:nth-child(1),
