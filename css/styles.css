@@ -54,11 +54,11 @@ body {
   gap: 2vw;
 }
 
-.the-game {
+#the-game {
   margin-top: 5vh;
 }
 
-.the-game > svg {
+#the-game > svg {
   margin-left: 34vw;
   width: 30vw;
   height: 55vh;
@@ -129,3 +129,64 @@ body {
   border: 5px solid white;
   font-weight: 600;
 }
+
+#result {
+  display: flex;
+  gap: 30vw;
+  margin-left: 27vw;
+  /* justify-content: center; */
+  /* visibility: hidden; */
+  display: none;
+}
+
+.rock,
+.paper,
+.scissors {
+  display: none;
+}
+
+.rock > img:nth-child(1) {
+  position: absolute;
+}
+
+.rock > img:nth-child(2) {
+  position: relative;
+  justify-items: center;
+  left: 41px;
+  top: 50px;
+}
+
+.paper > img:nth-child(1) {
+  position: absolute;
+}
+
+.paper > img:nth-child(2) {
+  position: relative;
+  justify-items: center;
+  left: 47px;
+  top: 45px;
+}
+
+.scissors > img:nth-child(1) {
+  position: absolute;
+}
+
+.scissors > img:nth-child(2) {
+  position: relative;
+  justify-items: center;
+  left: 63px;
+  top: 50px;
+}
+
+/* #result > .you-picked > div:nth-child(1) > img:nth-child(1),
+#result > .pc-picked > div:nth-child(1) > img:nth-child(1) {
+  position: absolute;
+}
+
+#result > .you-picked > div:nth-child(1) > img:nth-child(2),
+#result > .pc-picked > div:nth-child(1) > img:nth-child(2) {
+  position: relative;
+  justify-items: center;
+  left: 41px;
+  top: 50px;
+} */
