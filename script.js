@@ -12,8 +12,8 @@ document
 
 var computerScore = document.getElementById("computer-score");
 var userScore = document.getElementById("your-score");
-console.log(computerScore);
-console.log(userScore);
+// console.log(computerScore);
+// console.log(userScore);
 
 const pageReload = () => location.reload();
 
@@ -24,8 +24,19 @@ const computerChoice = () => {
   return getRandomInt(3);
 };
 
+const saveScore = (userScore, computerScore) => {
+  // console.log(userScore);
+  // console.log(computerScore);
+  localStorage.setItem("userScore", userScore);
+  localStorage.setItem("computerScore", computerScore);
+};
+
+window.onload = () => {
+  computerScore.innerHTML = Number(localStorage.getItem("computerScore")) + 0;
+  userScore.innerHTML = Number(localStorage.getItem("userScore")) + 0;
+};
+
 const result = (userChoice, pcChoice) => {
-  console.log(userChoice, pcChoice);
   if (userChoice == pcChoice) {
     document.getElementById("message1").innerHTML = "TIE UP";
     document.getElementById("message2").style.visibility = "hidden";
@@ -38,12 +49,18 @@ const result = (userChoice, pcChoice) => {
     document.getElementById("next-button").style.display = "block";
     document.getElementById("message1").innerHTML = "YOU WIN";
     userScore.innerHTML = Number(userScore.innerHTML) + 1;
-    console.log(userScore);
+    // console.log(userScore);
+    // localStorage.setItem("userScore", `"${Number(userScore.innerHTML)}"`);
   } else {
     document.getElementById("message1").innerHTML = "YOU LOST";
     computerScore.innerHTML = Number(computerScore.innerHTML) + 1;
-    console.log(computerScore);
+    // console.log(computerScore);
+    // localStorage.setItem(
+    //   "computerScore",
+    //   `"${Number(computerScore.innerHTML)}"`
+    // );
   }
+  saveScore(Number(userScore.innerHTML), Number(computerScore.innerHTML));
 };
 
 const addChoices = userChoice => {
