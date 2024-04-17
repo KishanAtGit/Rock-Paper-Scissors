@@ -142,8 +142,9 @@ body {
 
 #result {
   display: flex;
-  gap: 30vw;
-  margin-left: 27vw;
+  justify-content: center;
+  gap: 15vw;
+  margin-left: 15vw;
   margin-top: 15vh;
   display: none;
 }
@@ -152,8 +153,8 @@ body {
 .pc-picked {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 5vh;
+  width: 25vw;
 }
 
 .you-picked > div:nth-child(1),
@@ -161,7 +162,15 @@ body {
   font-size: 1.3em;
   color: white;
   font-weight: 600;
+  margin-left: 3.5em;
 }
+
+/* .pc-picked > div:nth-child(1) {
+  font-size: 1.3em;
+  color: white;
+  font-weight: 600;
+  margin-left: 3.5em;
+} */
 
 .rock,
 .paper,
@@ -220,7 +229,7 @@ body {
 
 #message2 {
   font-weight: 700;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
 }
 
@@ -235,16 +244,3 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
-/* #result > .you-picked > div:nth-child(1) > img:nth-child(1),
-#result > .pc-picked > div:nth-child(1) > img:nth-child(1) {
-  position: absolute;
-}
-
-#result > .you-picked > div:nth-child(1) > img:nth-child(2),
-#result > .pc-picked > div:nth-child(1) > img:nth-child(2) {
-  position: relative;
-  justify-items: center;
-  left: 41px;
-  top: 50px;
-} */
