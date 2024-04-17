@@ -10,6 +10,11 @@ document
     document.getElementById("banner").style.visibility = "hidden";
   });
 
+var computerScore = document.getElementById("computer-score");
+var userScore = document.getElementById("your-score");
+console.log(computerScore);
+console.log(userScore);
+
 const pageReload = () => location.reload();
 
 const computerChoice = () => {
@@ -32,8 +37,12 @@ const result = (userChoice, pcChoice) => {
   ) {
     document.getElementById("next-button").style.display = "block";
     document.getElementById("message1").innerHTML = "YOU WIN";
+    userScore.innerHTML = Number(userScore.innerHTML) + 1;
+    console.log(userScore);
   } else {
     document.getElementById("message1").innerHTML = "YOU LOST";
+    computerScore.innerHTML = Number(computerScore.innerHTML) + 1;
+    console.log(computerScore);
   }
 };
 
