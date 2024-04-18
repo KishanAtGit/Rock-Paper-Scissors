@@ -53,20 +53,16 @@
     </div>
 
     <div id="the-game">
-      <svg width="100vw" height="50vh">
-        <polygon class="background-triangle" points="90,70 380,70 235,300" />
-        <!-- <span> -->
+      <svg width="100vw" height="70vh">
+        <polygon class="background-triangle" points="90,70 420,70 257,350" />
         <a href="#" onclick="addChoices('rock')">
-          <image x="50" y="0" href="./img/Group 2.png" alt="" />
-          <image x="92" y="50" href="./img/icons8-fist-67 1.png" alt="" />
+          <image x="45" y="0" href="./img/Group 3.png" alt="" />
         </a>
         <a href="#" onclick="addChoices('scissors')">
-          <image x="255" y="0" href="./img/Group 3.png" alt="" />
-          <image x="318" y="50" href="./img/17911 1.png" alt="" />
+          <image x="277" y="0" href="./img/Group 1.png" alt="" />
         </a>
         <a href="#" onclick="addChoices('paper')">
-          <image x="153" y="200" href="./img/Group 1.png" alt="" />
-          <image x="199" y="244" href="./img/icons8-hand-64 1.png" alt="" />
+          <image x="160" y="208" href="./img/Group 2.png" alt="" />
         </a>
       </svg>
     </div>
@@ -75,32 +71,26 @@
       <div class="you-picked">
         <div>YOU PICKED</div>
         <div class="rock">
-          <img src="./img/Group 2.png" alt="" />
-          <img src="./img/icons8-fist-67 1.png" alt="" />
+          <img src="./img/Group 3.png" alt="" />
         </div>
         <div class="paper">
-          <img src="./img/Group 1.png" alt="" />
-          <img src="./img/icons8-hand-64 1.png" alt="" />
+          <img src="./img/Group 2.png" alt="" />
         </div>
         <div class="scissors">
-          <img src="./img/Group 3.png" alt="" />
-          <img src="./img/17911 1.png" alt="" />
+          <img src="./img/Group 1.png" alt="" />
         </div>
       </div>
 
       <div class="pc-picked">
         <div>PC PICKED</div>
         <div class="rock">
-          <img src="./img/Group 2.png" alt="" />
-          <img src="./img/icons8-fist-67 1.png" alt="" />
+          <img src="./img/Group 3.png" alt="" />
         </div>
         <div class="paper">
-          <img src="./img/Group 1.png" alt="" />
-          <img src="./img/icons8-hand-64 1.png" alt="" />
+          <img src="./img/Group 2.png" alt="" />
         </div>
         <div class="scissors">
-          <img src="./img/Group 3.png" alt="" />
-          <img src="./img/17911 1.png" alt="" />
+          <img src="./img/Group 1.png" alt="" />
         </div>
       </div>
     </div>
@@ -108,12 +98,14 @@
     <div id="result-message">
       <div id="message1">Dummy</div>
       <div id="message2">AGAINST PC</div>
-      <button id="play-again" onclick="pageReload()">PLAY AGAIN</button>
+      <button id="play-again" class="play-again" onclick="pageReload()">
+        PLAY AGAIN
+      </button>
     </div>
 
     <div id="corner-buttons">
       <button id="banner-openBtn">RULES</button>
-      <button id="next-button">NEXT</button>
+      <button onclick="hurrayPage()" id="next-button">NEXT</button>
     </div>
 
     <script src="./script.js"></script>
