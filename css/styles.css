@@ -183,7 +183,7 @@ body {
 .paper,
 .scissors {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: none;
 }
 
@@ -192,28 +192,63 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 18.8em;
+  width: 50%;
+  border-radius: 50%;
   height: 100%;
-  background-image: url("../img/Ellipse 5.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  opacity: 0;
+  background-image: url("../img/Ellipse\ 3.png"), url("../img/Ellipse\ 4.png"),
+    url("../img/Ellipse\ 5.png");
+  /* background-image: url("../img/Ellipse\ 3.png"); */
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  animation: zoomAndFade1 2s ease-in-out infinite,
+    zoomAndFade2 2s ease-in-out infinite, zoomAndFade3 2s ease-in-out infinite;
   z-index: -1;
-  animation: zoomAndFade 5s ease-in-out infinite;
 }
 
-@keyframes zoomAndFade {
+@keyframes zoomAndFade1 {
   0% {
-    background-size: 100% 100%;
-    opacity: 0;
+    /* opacity: 0; */
+    transform: scale(0.9);
   }
   50% {
-    background-size: 120% 120%;
-    opacity: 1;
+    /* opacity: 1; */
+    transform: scale(1);
   }
   100% {
-    background-size: 100% 100%;
-    opacity: 0;
+    /* opacity: 0; */
+    transform: scale(1.5);
+  }
+}
+
+@keyframes zoomAndFade2 {
+  0% {
+    /* opacity: 0; */
+    transform: scale(1);
+  }
+  60% {
+    /* opacity: 1; */
+    transform: scale(1.6);
+  }
+  100% {
+    /* opacity: 0; */
+    transform: scale(2);
+  }
+}
+
+@keyframes zoomAndFade3 {
+  0% {
+    /* opacity: 0; */
+    transform: scale(1);
+  }
+  70% {
+    /* opacity: 1; */
+    transform: scale(1.9);
+  }
+  100% {
+    /* opacity: 0; */
+    transform: scale(2);
   }
 }
 

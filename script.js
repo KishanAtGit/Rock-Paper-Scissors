@@ -37,6 +37,9 @@ window.onload = () => {
 };
 
 const result = (userChoice, pcChoice) => {
+  var userElemet = document.getElementsByClassName(userChoice);
+  var pcElement = document.getElementsByClassName(pcChoice);
+
   if (userChoice == pcChoice) {
     document.getElementById("message1").innerHTML = "TIE UP";
     document.getElementById("message2").style.visibility = "hidden";
@@ -49,9 +52,12 @@ const result = (userChoice, pcChoice) => {
     document.getElementById("next-button").style.display = "block";
     document.getElementById("message1").innerHTML = "YOU WIN";
     userScore.innerHTML = Number(userScore.innerHTML) + 1;
+    // const element = document.getElementsByClassName(userChoice);
+    userElemet[0].classList.add("animation");
   } else {
     document.getElementById("message1").innerHTML = "YOU LOST";
     computerScore.innerHTML = Number(computerScore.innerHTML) + 1;
+    userElemet[1].classList.add("animation");
   }
   saveScore(Number(userScore.innerHTML), Number(computerScore.innerHTML));
 };
